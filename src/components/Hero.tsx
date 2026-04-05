@@ -35,13 +35,13 @@ export default function Hero({ onEnrollClick }: { onEnrollClick: () => void }) {
         </motion.h1>
         
         <motion.p 
-          className="text-xl md:text-2xl text-white/90 mb-4 font-medium"
+          className="text-xl md:text-2xl text-white/90 mb-4 font-medium leading-relaxed"
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
-          NTSA Approved Training. 6 Convenient Branches. <br className="hidden md:block" />
-          Flexible Schedules for Busy Students.
+          We are a Kenyan driving school which offers professional driving course and training. <br className="hidden md:block" />
+          We ensure that our students are the best on the road.
         </motion.p>
 
         <motion.p

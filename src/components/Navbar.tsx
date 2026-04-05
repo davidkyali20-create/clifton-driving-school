@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-export default function Navbar() {
+export default function Navbar({ onEnrollClick }: { onEnrollClick: () => void }) {
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 glass-nav h-20 flex items-center px-6">
       <div className="max-w-7xl w-full mx-auto flex items-center justify-between">
@@ -25,7 +25,12 @@ export default function Navbar() {
 
         {/* Mobile Menu Placeholder (Optional, but good for UX) */}
         <div className="md:hidden">
-          <a href="#contact" className="bg-clifton-red text-white px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest">Enroll</a>
+          <button 
+            onClick={onEnrollClick}
+            className="bg-clifton-red text-white px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest"
+          >
+            Enroll
+          </button>
         </div>
       </div>
     </nav>

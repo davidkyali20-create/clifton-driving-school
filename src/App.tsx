@@ -12,7 +12,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white font-sans text-gray-900 selection:bg-clifton-red selection:text-white">
-      <Navbar />
+      <Navbar onEnrollClick={() => setIsModalOpen(true)} />
       <main>
         <Hero onEnrollClick={() => setIsModalOpen(true)} />
         <Branches />

@@ -43,15 +43,25 @@ export default function Footer() {
               <span className="font-black text-xl tracking-tighter uppercase">Clifton Driving School</span>
             </div>
             <p className="text-white/60 mb-8 max-w-xs">
-              Kenya's premier driving school providing NTSA approved training for over a decade.
+              We are a Kenyan driving school which offers professional driving course and training. We ensure that our students are the best on the road. Our instructors are NTSA accredited with great experience in training.
             </p>
-            <a 
-              href="tel:0745550777" 
-              className="flex items-center gap-3 text-2xl font-black hover:text-clifton-red transition-colors"
-            >
-              <Phone fill="currentColor" size={24} />
-              0745 550 777
-            </a>
+            <div className="flex flex-col gap-4 mb-8">
+              <a 
+                href="tel:0745550777" 
+                className="flex items-center gap-3 text-2xl font-black hover:text-clifton-red transition-colors"
+              >
+                <Phone fill="currentColor" size={24} />
+                0745 550 777
+              </a>
+              <div className="flex items-center gap-3 text-white/80">
+                <span className="font-bold uppercase tracking-wider text-xs bg-white/10 px-2 py-1 rounded">Email</span>
+                <a href="mailto:Cliftondrivingschoolltd@gmail.com" className="hover:text-clifton-red transition-colors">Cliftondrivingschoolltd@gmail.com</a>
+              </div>
+              <div className="flex items-center gap-3 text-white/80">
+                <span className="font-bold uppercase tracking-wider text-xs bg-white/10 px-2 py-1 rounded">Hours</span>
+                <span>Always open</span>
+              </div>
+            </div>
           </div>
 
           {/* Social Media Hub */}

@@ -2,7 +2,7 @@ import { Phone, MapPin } from "lucide-react";
 import { motion } from "motion/react";
 
 const branches = [
-  { name: "Ruiru (HQ)", address: "New Homes Bld, 1st Floor Rm 101", tel: "0708 433 111", dial: "0708433111" },
+  { name: "Ruiru (HQ)", address: "Ruiru Town Opposite Pettans Driving School , Ruiru, Kenya", tel: "0745 550 777", dial: "0745550777" },
   { name: "Githurai", address: "Naivas Road, 1st Floor Rm 4", tel: "0740 710 350", dial: "0740710350" },
   { name: "Riuriro", address: "Judah Stage, 1st Floor, RM 3", tel: "0726 374 074", dial: "0726374074" },
   { name: "Darasha", address: "Bridge Business Centre, 1st Floor RM 2", tel: "0748 833 571", dial: "0748833571" },

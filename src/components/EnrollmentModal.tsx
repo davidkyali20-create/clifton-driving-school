@@ -8,12 +8,12 @@ interface EnrollmentModalProps {
 }
 
 const branches = [
-  "Ruiru (HQ)",
-  "Githurai",
-  "Riuriro",
-  "Darasha",
-  "Kimbo",
-  "Makongeni"
+  { name: "Ruiru (HQ)", dial: "254745550777" },
+  { name: "Githurai", dial: "254740710350" },
+  { name: "Riuriro", dial: "254726374074" },
+  { name: "Darasha", dial: "254748833571" },
+  { name: "Kimbo", dial: "254707200916" },
+  { name: "Makongeni", dial: "254798504718" }
 ];
 
 const drivingClasses = [
@@ -60,10 +60,13 @@ export default function EnrollmentModal({ isOpen, onClose }: EnrollmentModalProp
     setStep("success");
 
     // WhatsApp Integration
+    const selectedBranch = branches.find(b => b.name === formData.branch);
+    const whatsappNumber = selectedBranch ? selectedBranch.dial : "254745550777"; // Fallback to HQ
+    
     const selectedClassLabel = drivingClasses.find(c => c.id === formData.drivingClass)?.label || "";
     const message = `*New Student Enrollment*%0A%0A*Name:* ${formData.fullName}%0A*ID Type:* ${formData.idType}%0A*ID No:* ${formData.documentNumber}%0A*Phone:* ${formData.phoneNumber}%0A*Branch:* ${formData.branch}%0A*Class:* ${selectedClassLabel}%0A*Total Investment:* Ksh ${fees.total.toLocaleString()}`;
     
-    const whatsappUrl = `https://wa.me/254745550777?text=${message}`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
     
     // Open WhatsApp after a short delay to let user see success message
     setTimeout(() => {
@@ -180,7 +183,7 @@ export default function EnrollmentModal({ isOpen, onClose }: EnrollmentModalProp
                       className="w-full h-12 px-4 rounded-xl border-2 border-gray-100 focus:border-clifton-blue outline-none transition-colors font-medium appearance-none bg-white"
                     >
                       <option value="" disabled>Choose a branch</option>
-                      {branches.map(branch => <option key={branch} value={branch}>{branch}</option>)}
+                      {branches.map(branch => <option key={branch.name} value={branch.name}>{branch.name}</option>)}
                     </select>
                     <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" size={18} />
                   </div>
